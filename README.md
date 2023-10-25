@@ -1,4 +1,3 @@
-The image runs `mvn spring-boot:run` by default.   
 
    
 
@@ -11,7 +10,7 @@ The image runs `mvn spring-boot:run` by default.
 version: '3.7'
 services:
   app:
-    build: tomas2387/ubuntu_maven_temurin:0.0.1
+    build: tomas2387/ubuntu_maven_temurin:21
     tty: true           # <-- This option is required to run the container forever
     volumes:
       - .:/opt/my_awesome_spring_app
@@ -21,7 +20,7 @@ services:
 
 ## Example Dockerfile
 ```
-FROM tomas2387/ubuntu_maven_temurin:0.0.1
+FROM tomas2387/ubuntu_maven_temurin:20
 
 ENV APP_DIR=/opt/my_awesome_spring_app
 WORKDIR $APP_DIR
